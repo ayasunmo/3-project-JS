@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="styles/recipe_styles.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/recipe_logo.png" alt="Recipe Logo" class="logo-img">
+    </div>
+    <div class="search-container">
+        <input type="text" class="search-input" id="search-input" placeholder="Search for recipes...">
+        <button class="btn search-btn" onclick="searchRecipes()">Search</button>
+    </div>
+</header>
+
+<section class="background-section">
+    <div class="container">
+        <div class="background-overlay"></div>
+            <h2>Welcome to the Recipe App!</h2>
+            <p>Explore delicious recipes from around the world</p>
+        </div>        
+    </div>
+</section>
+
+<section class="search-results">
+    <div class="container">
+        <h2>Search Results</h2>
+        <div id="search-results-container">
+        </div>        
+    </div>
+</section>
+
+
+<div id="recipe-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title">Название рецепта</h2>
+        <p id="modal-description">Описание рецепта</p>
+        <p id="modal-ingredients">Ингредиенты</p>
+        <p id="modal-time">Время приготовления</p>
+        <button class="add-to-favorites" onclick="addToFavorites()">Добавить в избранное</button>
+    </div>
+</div>
+
+
+
+<section class="favourites">
+    <div class="container">
+        <h2>Your Favourites List</h2>
+        <div id="favourites-container">
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Recipe App. All rights reserved.</p>
+</footer>
+
+<script src="script/recipe_script.js"></script>
+</body>
+</html>

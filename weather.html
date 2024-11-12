@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles/weather_style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <div class="search">
+            <input type="text" id="cityInput" placeholder="Введите город" autocomplete="off" oninput="getCitySuggestions()">
+            <button onclick="getWeather()">Поиск</button>
+            <ul id="suggestionsList"></ul>
+        </div>
+        <div class="current-weather">
+            <h2 id="cityName"></h2>
+            <p id="temp"></p>
+            <p id="humidity"></p>
+            <p id="wind"></p>
+            <p id="weatherIcon"></p>
+        </div>
+        <div class="forecast">
+            <h3>Прогноз на 5 дней</h3>
+            <div id="forecastList"></div>
+        </div>
+        <div class="location">
+            <button onclick="getLocationWeather()">Использовать текущее местоположение</button>
+        </div>
+        <div class="unit-toggle">
+            <button onclick="toggleUnits()">Сменить единицы</button>
+        </div>
+    </div>
+    <script src="script/weather_script.js"></script>
+</body>
+</html>

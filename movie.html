@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App</title>
+    <link rel="stylesheet" href="styles/movie_style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/movie_logo.png" alt="Movie Logo" class="logo-img">
+    </div>
+    <div class="search-container">
+        <input type="text" class="search-input" id="search-input" placeholder="Search for movies...">
+        <button class="btn search-btn" onclick="searchMovies()">Search</button>
+        <select id="sort-select" onchange="loadMovies()">
+            <option value="popularity.desc">Sort by Popularity</option>
+            <option value="release_date.desc">Sort by Release Date</option>
+            <option value="vote_average.desc">Sort by Rating</option>
+        </select>
+    </div>
+</header>
+
+    
+<section class="content">
+    <div class="movie-cards-container">
+        <div class="movie-card">
+            <img src="images/movie1.png" alt="It Ends on Us" class="movie-image">
+            <div class="movie-info">
+                <h2 class="movie-title">It Ends on Us</h2>
+                <p class="movie-description">A romantic drama about love, choices, and the complexity of relationships.</p>
+                <button class="btn" onclick="addToWatchLater(1, 'It Ends on Us', 'A romantic drama about love, choices, and the complexity of relationships.', 'movie1.png')">Watch Later</button>
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <img src="images/movie2.png" alt="Dune: Part Two" class="movie-image">
+            <div class="movie-info">
+                <h2 class="movie-title">Dune: Part Two</h2>
+                <p class="movie-description">The epic continuation of the Dune saga, focusing on Paul Atreides and his rise to power.</p>
+                <button class="btn" onclick="addToWatchLater(2, 'Dune: Part Two', 'The epic continuation of the Dune saga, focusing on Paul Atreides and his rise to power.', 'movie2.png')">Watch Later</button>
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <img src="images/movie3.png" alt="The Fall Guy" class="movie-image">
+            <div class="movie-info">
+                <h2 class="movie-title">The Fall Guy</h2>
+                <p class="movie-description">A stuntman is pulled into an action-packed adventure while trying to uncover the truth behind a mysterious disappearance.</p>
+                <button class="btn" onclick="addToWatchLater(3, 'The Fall Guy', 'A stuntman is pulled into an action-packed adventure while trying to uncover the truth behind a mysterious disappearance.', 'movie3.png')">Watch Later</button>
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <img src="images/movie4.png" alt="Kong vs Godzilla" class="movie-image">
+            <div class="movie-info">
+                <h2 class="movie-title">Kong vs Godzilla</h2>
+                <p class="movie-description">The epic battle between King Kong and Godzilla takes the world by storm.</p>
+                <button class="btn" onclick="addToWatchLater(4, 'Kong vs Godzilla', 'The epic battle between King Kong and Godzilla takes the world by storm.', 'movie4.png')">Watch Later</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="search-results">
+
+</section>
+
+
+<section class="watch-later-section">
+    <h2>Your Watch Later List</h2>
+    <div id="watch-later-container">
+    </div>
+</section>
+
+<script src="script/movie_script.js"></script>
+</body>
+</html>
